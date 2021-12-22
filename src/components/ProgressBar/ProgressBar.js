@@ -23,13 +23,17 @@ const sizes = {
   },
 };
 
-const ProgressBar = ({ value, size = "small" }) => {
+const ProgressBar = ({
+  value,
+  size = "small",
+  ariaTextValue = "Progress bar",
+}) => {
   return (
     <BarBackground
       role="progressbar"
       aria-valuenow={value}
       aria-valuemin="0"
-      aria-valuetext="Step 2: Copying files... "
+      aria-valuetext={ariaTextValue}
       aria-valuemax="100"
       {...sizes[size]}
     >
